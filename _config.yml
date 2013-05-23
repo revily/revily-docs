@@ -1,0 +1,9 @@
+name: Reveille
+pygments: true
+relative_permalinks: false
+
+markdown: redcarpet
+
+exclude: [ 
+  'script', 'vendor', 'config.ru', 'Gemfile*', 'Guardfile', 'bin', 'unicorn.rb', 'Procfile'
+]

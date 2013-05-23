@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Reveille - {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="{{ site.url }}/css/syntax.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <script src="{{ site.url }}/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
+  </head>
+  <body>
+    {% include nav.html %}
+
+    <div id="wrap" class="container">
+      <section id="main" class="row">
+        <aside id="sidebar" class="span2">
+          {% include sidebar.html %}
+        </aside>
+        <article id="content" class="span10">
+          {{ content }}
+        </article>
+      </section>
+         
+    </div>
+
+  </body>
+</html>

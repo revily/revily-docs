@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+
+if [ "$1" = "-v" ]; then
+  exec 3>&1
+else
+  exec 3>/dev/null
+fi
+
+if [ -e ".env" ]; then
+  while read line; do export $line; done < ".env"
+fi
+
+echo "Vendoring gems"
+rm -rf .bundle
+bundle install --binstubs --path vendor/gems "$@"
+
+echo "Done!"
