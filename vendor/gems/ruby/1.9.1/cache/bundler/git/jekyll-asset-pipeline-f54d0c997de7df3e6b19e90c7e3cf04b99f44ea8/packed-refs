@@ -1,0 +1,18 @@
+# pack-refs with: peeled 
+72cb2cf50fc48d0afffc2472c659965730fd4d99 refs/heads/gitignore-spec-staging-path
+a7ec07be2d6b802aa969be56acf73a71845b4d7d refs/heads/loosen-dependency-on-jekyll-to-work-with-1.0.0
+80955195e16d5fc8712fba6bbc16a8a53e2491f9 refs/heads/master
+71a8964478ce9aca167f6ba8512d26fea57edb93 refs/heads/shorter-liquid-asset-tag-naming
+99efe50a2ece22a7e161def5606a76eb272960d5 refs/heads/update-readme-to-document-usage-of-yaml-inline-lists
+cc8b2d8b9261a253786ddf52d2f89eb72b36264e refs/heads/update-version-to-match-rubygems-org
+aeeddecad17e17638706b15cadc63da16f89197f refs/tags/v0.0.5
+^53109191a88a786709a56583d84ddfce74eebbee
+688d87da0d720411f7324e10dfe8944a11862a1a refs/tags/v0.1.0
+9115a1e54a6dfd23ae90cf4a9b15fe17d9eacf91 refs/tags/v0.1.1
+^23b94d57a2429fbc48e476587567795133295e80
+1085019bdd4fc421569f46737c00e79de9726ac6 refs/tags/v0.1.2
+1d9b92f9420825b431dbe35faafc4a705b9c12db refs/tags/v0.1.3
+^24d8176d1c8e011f401d0bbf78e12418d0189c41
+c34c429120334ad0f0798c9ea6a7b99c9fedc0fa refs/tags/v0.1.4
+fd44e54507d32cbb359212eb14d491e99316e035 refs/tags/v0.1.5
+80955195e16d5fc8712fba6bbc16a8a53e2491f9 refs/tags/v0.1.6

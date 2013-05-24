@@ -13,19 +13,11 @@ permalink: /docs/api/incidents/
 {% action GET /services/:service_id/incidents %}
 
 <div class="row-fluid">
-  <article class="span6 data-block">
-
-    <header>
-      <h2>Params</h2>
-    </header>
-
-    <section>
-
+  {% params %}
     {% param message string required "The content of the notification sent to the current user on-call" "load average alert on app1.example.com" %}
     {% param key string "A unique identifier for use with your monitoring service" "app1.example.com/load_average" %}
+  {% endparams %}
 
-    </section>
-  </article>
   <article class="span6 dark data-block">
     <header>
       <h2>Response</h2>
