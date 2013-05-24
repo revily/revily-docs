@@ -42,7 +42,7 @@ GEM
       jekyll (>= 0.12.0, < 2.0)
       rack (~> 1.5.0)
     raindrops (0.11.0)
-    redcarpet (2.2.2)
+    redcarpet (2.3.0)
     safe_yaml (0.7.1)
     sass (3.2.9)
     sprockets (2.10.0)
