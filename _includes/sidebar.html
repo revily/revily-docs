@@ -1,44 +1,67 @@
+<!-- <ul class="nav nav-list" data-spy="affix"> -->
 <ul class="nav nav-list">
-            <li class="nav-header">
-              Getting Started
-            </li>
-            <li class="{% if page.title == "Introduction" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/introduction">Introduction</a>
-            </li>
-            <li class="{% if page.title == "Installation" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/installation">Installation</a>
-            </li>
-            <li class="{% if page.title == "Configuration" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/configuration">Configuration</a>
-            </li>
-            <li class="{% if page.title == "Deployment" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/deployment">Deployment</a>
-            </li>
+  <li class="nav-header">
+    Getting Started
+  </li>
+  <li class="{% if page.title == "Introduction" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/introduction">Introduction</a>
+  </li>
+  <li class="{% if page.title == "Installation" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/installation">Installation</a>
+  </li>
+  <li class="{% if page.title == "Configuration" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/configuration">Configuration</a>
+  </li>
+  <li class="{% if page.title == "Deployment" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/deployment">Deployment</a>
+  </li>
 
-            <li class="divider"></li>
-            <li class="nav-header">
-              API Reference
-            </li>
-            <li class="{% if page.title == "API - Incidents" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/api/incidents">Incidents</a>
-            </li>
-            <li class="{% if page.title == "API - Policies" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/api/policies">Policies</a>
-            </li>
-            <li class="{% if page.title == "API - Schedules" %}active{% endif %}">
-              <a href="/{{ site.url }}docs/api/schedules">Schedules</a>
-            </li>
-            <li class="{% if page.title == "API - Services" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/api/services">Services</a>
-            </li>
-            <li class="{% if page.title == "API - Users" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/api/users">Users</a>
-            </li>
-            <li class="{% if page.title == "API - Integration" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/api/integration">Integration</a>
-            </li>
-            <li class="{% if page.title == "API - Account" %}active{% endif %}">
-              <a href="{{ site.url }}/docs/api/account">Account</a>
-            </li>
+  <li class="divider"></li>
+  <li class="nav-header">
+    API Reference
+  </li>
+  <li class="{% if page.title == "API - Incidents" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/api/incidents">Incidents</a>
+          <!-- <ul class="nav nav-list" data-spy="affix"> -->
+    <small>
+      <ul class="nav nav-list">
+      <!-- <li class="nav-header">Incidents</li> -->
+        <li>
+          <a href="#incidents-index">List incidents</a>
+        </li>
+        <li>
+          <a href="#incidents-show">Show incident</a>
+        </li>
+        <li>
+          <a href="#incidents-create">Create incident</a>
+        </li>
+        <li>
+          <a href="#incidents-update">Update incident</a>
+        </li>
+        <li>
+          <a href="#incidents-delete">Delete incident</a>
+        </li>
+      </ul>
+    </small>
 
-          </ul>
+  </li>
+  <li class="{% if page.title == "API - Policies" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/api/policies">Policies</a>
+  </li>
+  <li class="{% if page.title == "API - Schedules" %}active{% endif %}">
+    <a href="/{{ site.url }}docs/api/schedules">Schedules</a>
+  </li>
+  <li class="{% if page.title == "API - Services" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/api/services">Services</a>
+  </li>
+  <li class="{% if page.title == "API - Users" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/api/users">Users</a>
+  </li>
+  <li class="{% if page.title == "API - Integration" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/api/integration">Integration</a>
+  </li>
+  <li class="{% if page.title == "API - Account" %}active{% endif %}">
+    <a href="{{ site.url }}/docs/api/account">Account</a>
+  </li>
+
+</ul>
