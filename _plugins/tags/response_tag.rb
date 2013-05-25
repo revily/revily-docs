@@ -1,5 +1,5 @@
 module Jekyll
-  class ParamsTag < Liquid::Block
+  class ResponseTag < Liquid::Block
     # {% params %}
     #     {% param message string required "The content of the notification sent to the current user on-call" "load average alert on app1.example.com" %}
     #     {% param key string "A unique identifier for use with your monitoring service" "app1.example.com/load_average" %}
@@ -22,9 +22,9 @@ module Jekyll
     def render(context)
       output = super
 
-      "<article class='span6 blue data-block'><header><h2>Params</h2></header><section>#{output}</section></article>"
+      "<article class='span6 blue data-block'><header><h2>Response</h2></header><section>#{output}</section></article>"
     end
   end
 end
 
-Liquid::Template.register_tag('params', Jekyll::ParamsTag)
+Liquid::Template.register_tag('response', Jekyll::ResponseTag)

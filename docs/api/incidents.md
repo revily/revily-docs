@@ -4,10 +4,9 @@ title: API - Incidents
 permalink: /docs/api/incidents/
 ---
 
-<div id="#incidents-index" class="doc-section">
+<section id="#incidents-index" class="doc-section">
 
-
-### List incidents
+<h2>List incidents</h2>
 
 {% action GET /incidents %}
 {% action GET /services/:service_id/incidents %}
@@ -18,12 +17,8 @@ permalink: /docs/api/incidents/
     {% param key string "A unique identifier for use with your monitoring service" "app1.example.com/load_average" %}
   {% endparams %}
 
-  <article class="span6 dark data-block">
-    <header>
-      <h2>Response</h2>
-    </header>
-    <section>
-{% highlight json %}
+  {% response %}
+    {% highlight json %}
 [
   {
     "id": "V4pe5NT2",
@@ -51,22 +46,25 @@ permalink: /docs/api/incidents/
     }
   }
 ]
-{% endhighlight %}
-    </section>
-  </article>
+      {% endhighlight %}
+    {% endresponse %}
+
 </div>
-</div>
+</section>
 
 <section id="incidents-show" class="doc-section">
+  <h2>Retrieve an incident</h2>
 
-### Get a single incident
+  {% action GET /incidents/:id %}
 
-    GET /incidents/:id
+<div class="row-fluid">
+  {% params %}
+    <p>None</p>
+  {% endparams %}
 
-#### Response
-
-```json
-  {
+  {% response %}
+    {% highlight json %}
+    {
     "id": "V4pe5NT2",
     "state": "triggered",
     "triggered_at": "2013-05-14T06:17:54Z",
@@ -91,8 +89,10 @@ permalink: /docs/api/incidents/
       }
     }
   }
-```
+      {% endhighlight %}
+    {% endresponse %}
 
+</div>
 </section>
 
 
@@ -146,5 +146,5 @@ permalink: /docs/api/incidents/
 }
 ```
 
-</div>
+</section>
 

@@ -3,6 +3,8 @@ pygments: true
 relative_permalinks: false
 
 markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "disable_indented_code_blocks"]
 
 exclude: [ 
   'script', 'vendor', 'config.ru', 'Gemfile*', 'Guardfile', 'bin', 'unicorn.rb', 'Procfile'
