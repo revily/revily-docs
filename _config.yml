@@ -7,3 +7,10 @@ markdown: redcarpet
 exclude: [ 
   'script', 'vendor', 'config.ru', 'Gemfile*', 'Guardfile', 'bin', 'unicorn.rb', 'Procfile'
 ]
+
+assets:
+  # compress:
+    # js: uglifier
+    # css: sass
+    
+  cachebust: soft

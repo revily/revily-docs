@@ -4,7 +4,7 @@ title: API - Incidents
 permalink: /docs/api/incidents/
 ---
 
-<div id="#incidents-index">
+<div id="#incidents-index" class="doc-section">
 
 
 ### List incidents
@@ -57,7 +57,8 @@ permalink: /docs/api/incidents/
 </div>
 </div>
 
-<section id="incidents-show">
+<section id="incidents-show" class="doc-section">
+
 ### Get a single incident
 
     GET /incidents/:id
@@ -93,6 +94,10 @@ permalink: /docs/api/incidents/
 ```
 
 </section>
+
+
+<section id="incidents-create" class="doc-section">
+
 ### Create an incident
 
     POST /services/:service_id/incidents
@@ -142,6 +147,4 @@ permalink: /docs/api/incidents/
 ```
 
 </div>
-  </div>
-
 
