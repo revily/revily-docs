@@ -13,7 +13,8 @@ module Jekyll
     end
 
     def render(context)
-      "<pre><span class='label label-info'>#{@action}</span> #{@url}</pre>"
+      # "<pre><span class='label label-info'>#{@action}</span> #{@url}</pre>"
+      "<pre>#{@action} #{@url}</pre>"
     end
 
   end

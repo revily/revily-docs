@@ -22,7 +22,7 @@ module Jekyll
     def render(context)
       output = super
 
-      "<article class='span6 blue data-block'><header><h2>Params</h2></header><section>#{output}</section></article>"
+      "<article><header><h4>Params</h4></header><section>#{output}</section></article>"
     end
   end
 end

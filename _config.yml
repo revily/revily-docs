@@ -16,3 +16,5 @@ assets:
     # css: sass
     
   cachebust: soft
+
+api_url: https://api.reveille.io

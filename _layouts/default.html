@@ -13,12 +13,14 @@
   <body>
     {% include nav.html %}
 
-    <div id="wrap" class="container-fluid">
-      <section id="docs" class="row-fluid">
+    <div id="wrap" class="container">
+      <section id="docs" class="row">
         <aside id="sidebar" class="span2">
           {% include sidebar.html %}
         </aside>
-        <article id="content" class="span10">
+        <aside id="sub-sidebar" class="span2">
+        </aside>
+        <article id="content" class="span8">
           {{ content }}
         </article>
       </section>
