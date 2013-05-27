@@ -3,13 +3,23 @@ $ ->
   $.waypoints('refresh')
 
   $('.doc-section')
-    # .waypoint ((dir) -> $("a[href='##{@id}']").parent("li").toggleClass('active', dir == 'down')), 
-    #   context: '#docs', 
-    #   offset: '100%'
-    # .waypoint ((dir) -> $("a[href='##{@id}']").parent("li").toggleClass('active', dir == 'up')), 
     .waypoint
-      handler: (dir) -> 
-        alert(dir)
-      context: '#docs'
-      # offset: ->
-        # -$(@).height()
+      handler: (direction) ->
+        $("a[href='##{@id}']").parent("li").toggleClass('active', direction == 'down')
+      offset: '100%'
+    .waypoint
+      handler: (direction) ->
+        $("a[href='##{@id}']").parent("li").toggleClass('active', direction == 'up')
+      offset: ->
+        -$(@).height();
+
+  $('.doc-main')
+    .waypoint
+      handler: (direction) ->
+        $("a[href='##{@id}']").parent("li").toggleClass('active', direction == 'down')
+      offset: '100%'
+    .waypoint
+      handler: (direction) ->
+        $("a[href='##{@id}']").parent("li").toggleClass('active', direction == 'up')
+      offset: ->
+        -$(@).height();

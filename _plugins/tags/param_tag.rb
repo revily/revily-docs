@@ -24,8 +24,7 @@ module Jekyll
     #
     def initialize(tag_name, markup, tokens)
       attributes = [ 'name', 'type', 'need', 'desc', 'example' ]
-      # if text =~ /(?<name>\S*)\s+(?<type>\S*)\s+(?<need>\S*)\s+\"(?<desc>\S.*)\"\s+\"(?<example>\S.*)\"/
-      if markup =~ /^(?<name>\S*)\s+(?<type>\S*)\s+(?<need>\S.*\s+)?\"(?<desc>\S.*)\"\s+\"(?<example>\S.*)\"/
+      if markup =~ /^(?<name>\S*)\s+(?<type>\S*)\s+(?<need>\S.*\s+)?\"(?<desc>\S.*)\"\s+\"(?<example>\S.*)\"/i
         @param = attributes.reduce({}) { |param, attr| param[attr] = $~[attr].strip if $~[attr]; param}
 
         @param['need'] ||= "optional"
@@ -37,8 +36,8 @@ module Jekyll
     def render(context)
       if @param
         param_name = "<div class='param-name'><strong>#{@param['name']}</strong></div>"
-        param_type = "<span class='param-type'><small class='muted'>#{@param['type']},</small></span>"
-        param_need = "<span class='param-need'><small class='muted'>#{@param['need']}</small></span>"
+        param_type = "<div class='param-type'><small class='muted'>#{@param['type']}</small></div>"
+        param_need = "<div class='param-need'><small class='muted'>#{@param['need']}</small></div>"
         param_key = "<div class='param-key span4'>#{param_name} #{param_type} #{param_need}</div>"
 
         param_desc  = "<div class='param-desc'>#{@param['desc']}</div>" #if @param['example']
@@ -55,5 +54,3 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('param', Jekyll::ParamTag)
-
-

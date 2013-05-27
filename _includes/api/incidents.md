@@ -1,12 +1,8 @@
----
-layout: default
-title: API - Incidents
-permalink: /docs/api/incidents/
----
+<div id="incidents" class="doc-main">
 
 # Incidents
 
-<section id="#incidents-index" class="doc-section row-fluid">
+<section id="incidents-index" class="doc-section row-fluid">
 
 ## Attributes
 
@@ -230,7 +226,7 @@ DELETE /incidents/:id
 ### Request
 
 ```bash
-$ curl {{ site.api_url }}/incidents \
+$ curl {{ site.api_url }}/incidents/V4pe5NT2 \
     -X DELETE \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
@@ -242,3 +238,5 @@ HTTP/1.1 204 No Content
 
 ```
 </section>
+
+</div>
