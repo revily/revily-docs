@@ -21,26 +21,36 @@
     API Reference
   </li>
   <li class="{% if page.title == "API - Incidents" %}active{% endif %}">
-    <a href="{{ site.url }}/docs/api/incidents">Incidents</a>
+    <a href="/docs/api#incidents">Incidents</a>
     {% include sidebar/incidents.html %}
   </li>
   <li class="{% if page.title == "API - Policies" %}active{% endif %}">
-    <a href="{{ site.url }}/docs/api/policies">Policies</a>
+    <a href="/docs/api#policies">Policies</a>
+    {% include sidebar/policies.html %}
   </li>
   <li class="{% if page.title == "API - Schedules" %}active{% endif %}">
-    <a href="/{{ site.url }}docs/api/schedules">Schedules</a>
+    <a href="/docs/api#schedules">Schedules</a>
+    {% include sidebar/schedules.html %}
   </li>
   <li class="{% if page.title == "API - Services" %}active{% endif %}">
-    <a href="{{ site.url }}/docs/api/services">Services</a>
+    <a href="/docs/api#services">Services</a>
+    {% include sidebar/services.html %}
   </li>
   <li class="{% if page.title == "API - Users" %}active{% endif %}">
-    <a href="{{ site.url }}/docs/api/users">Users</a>
+    <a href="/docs/api#users">Users</a>
+    {% include sidebar/users.html %}
   </li>
   <li class="{% if page.title == "API - Integration" %}active{% endif %}">
-    <a href="{{ site.url }}/docs/api/integration">Integration</a>
+    <a href="/docs/api#integration">Integration</a>
+    {% include sidebar/integration.html %}
   </li>
   <li class="{% if page.title == "API - Account" %}active{% endif %}">
-    <a href="{{ site.url }}/docs/api/account">Account</a>
+    <a href="/docs/api#account">Account</a>
+    {% include sidebar/account.html %}
+  </li>
+  <li class="{% if page.title == "API - Account" %}active{% endif %}">
+    <a href="/docs/api#webhooks">Webhooks</a>
+    {% include sidebar/webhooks.html %}
   </li>
 
 </ul>

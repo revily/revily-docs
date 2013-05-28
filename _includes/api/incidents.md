@@ -1,23 +1,23 @@
-<div id="incidents" class="doc-main">
+<section id="incidents" class="doc-section">
 
-# Incidents
+## Incidents
 
-<section id="incidents-index" class="doc-section row-fluid">
+<article id="incidents-index" class="doc-article row-fluid">
 
-## Attributes
+### Attributes
 
 {% param message string required "The content of the notification sent to the current user on-call" "load average alert on app1.example.com" %}
 {% param key string optional "A unique identifier for use with your monitoring service. If you don't provide a key, one will be generated for you. Use this key when triggering incidents via the Integration API to prevent duplicate incidents from being created (and subsequently, duplicate SMS/email/phone alerts)." "app1.example.com/load_average" %}
 {% param description string "A more thorough definition of the issue, used in email notification" "The load average on host.example.com is over 9000!" %}
 
-## List all incidents
+### List all incidents
 
 ```
 GET /incidents
 GET /services/:service_id/incidents
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/incidents \
@@ -29,7 +29,7 @@ $ curl {{ site.api_url }}/services/KHMFftSu/incidents \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -63,23 +63,23 @@ Content-Type: application/json
   }
 ]
 ```
-</section>
+</article>
 
-<section id="incidents-show" class="doc-section row-fluid">
-## Retrieve an incident
+<article id="incidents-show" class="doc-article row-fluid">
+### Retrieve an incident
 
 ```
 GET /incidents/:id
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/incidents/V4pe5NT2 \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -111,22 +111,22 @@ Content-Type: application/json
   }
 }
 ```
-</section>
+</article>
 
-<section id="incidents-create" class="doc-section row-fluid">
-## Create an incident
+<article id="incidents-create" class="doc-article row-fluid">
+### Create an incident
 
 ```
 POST /services/:service_id/incidents
 ```
 
-### Parameters
+#### Parameters
 
 * **message** _required_
 * **key** _optional_
 * **description** _optional_
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/services/KHMFftSu/incidents \
@@ -136,7 +136,7 @@ $ curl {{ site.api_url }}/services/KHMFftSu/incidents \
     -d 'description=The load average on host.example.com is over 9000!'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 201 Created
@@ -168,16 +168,16 @@ Content-Type: application/json
   }
 }
 ```
-</section>
+</article>
 
-<section id="incidents-acknowledge" class="doc-section row-fluid">
-## Acknowledge an incident
+<article id="incidents-acknowledge" class="doc-article row-fluid">
+### Acknowledge an incident
 
 ```
 PUT /incidents/:id/acknowledge
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/incidents/V4pe5NT2/acknowledge \
@@ -185,22 +185,22 @@ $ curl {{ site.api_url }}/incidents/V4pe5NT2/acknowledge \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 204 No Content
 
 ```
-</section>
+</article>
 
-<section id="incidents-resolve" class="doc-section row-fluid">
-## Resolve an incident
+<article id="incidents-resolve" class="doc-article row-fluid">
+### Resolve an incident
 
 ```
 PUT /incidents/:id/resolve
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/incidents/V4pe5NT2/resolve \
@@ -208,22 +208,22 @@ $ curl {{ site.api_url }}/incidents/V4pe5NT2/resolve \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 204 No Content
 
 ```
-</section>
+</article>
 
-<section id="incidents-delete" class="doc-section row-fluid">
-## Delete an incident
+<article id="incidents-delete" class="doc-article row-fluid">
+### Delete an incident
 
 ```
 DELETE /incidents/:id
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/incidents/V4pe5NT2 \
@@ -231,12 +231,12 @@ $ curl {{ site.api_url }}/incidents/V4pe5NT2 \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 204 No Content
 
 ```
-</section>
+</article>
 
-</div>
+</section>

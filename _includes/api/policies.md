@@ -1,34 +1,30 @@
----
-layout: default
-title: API - Policies
-permalink: /docs/api/policies/
----
+<section id="policies" class="doc-section">
 
 ## Policies
 
-<section id="#policies-index" class="doc-section row-fluid">
+<article id="policies-index" class="doc-article row-fluid">
 
-## Attributes
+### Attributes
 
 {% param name string "The human name used to identify a policy" "Operations" %}
 {% param escalation_loop_limit integer required "The number of times a policy will loop through its rules when notifying about a triggered incident" "3" %}
 {% param acknowledge_timeout integer optional "The number in minutes before an acknowledged incident will re-trigger" "30" %}
 {% param description string "A more thorough definition of the issue, used in email notification" "The load average on host.example.com is over 9000!" %}
 
-## List all policies
+### List all policies
 
 ```
 GET /policies
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/policies \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -61,23 +57,23 @@ Content-Type: application/json
   }
 ]
 ```
-</section>
+</article>
 
-<section id="policies-show" class="doc-section row-fluid">
-## Retrieve an policy
+<article id="policies-show" class="doc-article row-fluid">
+### Retrieve a policy
 
 ```
 GET /policies/:id
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/policies/jxG5heSY \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -96,23 +92,23 @@ Content-Type: application/json
   }
 }
 ```
-</section>
+</article>
 
-<section id="policies-create" class="doc-section row-fluid">
-## Create a policy
+<article id="policies-create" class="doc-article row-fluid">
+### Create a policy
 
 ```
 POST /policies
 ```
 
-### Parameters
+#### Parameters
 
 * **name** _required_
 * **escalation_loop_limit** _required_
 * **acknowledge_timeout** _optional, default: 30_
 * **auto_resolve_timeout** _optional, default: 240_
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/services/KHMFftSu/policies \
@@ -123,7 +119,7 @@ $ curl {{ site.api_url }}/services/KHMFftSu/policies \
     -d 'auto_resolve_timeout=60'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 201 Created
@@ -142,16 +138,16 @@ Content-Type: application/json
   }
 }
 ```
-</section>
+</article>
 
-<section id="policies-acknowledge" class="doc-section row-fluid">
-## Acknowledge an policy
+<article id="policies-update" class="doc-article row-fluid">
+### Update a policy
 
 ```
-PUT /policies/:id/acknowledge
+PUT /policies/:id
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/policies/jxG5heSY \
@@ -160,22 +156,22 @@ $ curl {{ site.api_url }}/policies/jxG5heSY \
     -d 'name=DevOps'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 204 No Content
 
 ```
-</section>
+</article>
 
-<section id="policies-delete" class="doc-section row-fluid">
-## Delete an policy
+<article id="policies-delete" class="doc-article row-fluid">
+### Delete a policy
 
 ```
 DELETE /policies/:id
 ```
 
-### Request
+#### Request
 
 ```bash
 $ curl {{ site.api_url }}/policies/jxG5heSY \
@@ -183,10 +179,11 @@ $ curl {{ site.api_url }}/policies/jxG5heSY \
     -H 'Authorization: Token token="dGpYyvbApYxXGAvPkQjt"'
 ```
 
-### Response
+#### Response
 
 ```http
 HTTP/1.1 204 No Content
 
 ```
+</article>
 </section>
