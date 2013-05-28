@@ -1,5 +1,5 @@
 #= require jquery
 #= require bootstrap
-#= require jquery.bullseye
+#= require jquery.espy
 #= require_self
 #= require_tree ./
